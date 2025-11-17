@@ -1,42 +1,35 @@
 
-# Exp.No:2c
-## BUILT-IN FUNCTIONS AND LAMBDA FUNCTIONS - RELATING TWO NUMBERS
-
----
+# Exp.No:2b  
+## FUNCTIONS - PERFECT NUMBER
 
 ### AIM  
-To write a Python program to check the relation between two numbers — whether one number is greater than, equal to, or lesser than another — using a lambda function.
-
----
+To write a Python program to check if a number is a Perfect number using the concept of functions.
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Use `eval()` to get two numbers (`num1` and `num2`) from the user.  
-3. Define a lambda function `max` that takes two arguments `x` and `y`.  
-4. The lambda function compares the numbers and prints:
-   - If `x > y`, then it prints: "`num2` is smaller than `num1`".
-   - Otherwise, it prints: "`num1` is smaller than `num2`".
-5. Call the lambda function by passing `num1` and `num2` as arguments.  
-6. Terminate the program.
+2. Read the number `n` from the user using `input()`.  
+3. Convert the input to an integer.  
+4. Define the function `perfectNumber(n)` with the following steps:  
+    - Initialize a variable `factor_sum` to 0.  
+    - Iterate through all numbers from 1 to `n//2` (as divisors of a number can't be greater than half of it).  
+    - If a number `i` divides `n` perfectly (i.e., `n % i == 0`), add `i` to `factor_sum`.  
+    - If `factor_sum` is equal to `n`, then print the number is a perfect number. Otherwise, print it's not a perfect number.  
+5. Terminate the program.
 
----
 
 ### PROGRAM
-```
-
-x=int(input())
-y=int(input())
-if(x<y):
-    print(x,"is smaller than",y)
+n = int(input())
+sum1 = 0
+for i in range(1, n):
+    if(n % i == 0):
+        sum1 = sum1 + i
+if (sum1 == n):
+    print("The number is a Perfect number!")
 else:
-    print(y,"is smaller than",x)
-```
-
+    print("The number is not a Perfect number!")
 ### OUTPUT
-
-<img width="959" height="273" alt="Screenshot 2025-08-31 203706" src="https://github.com/user-attachments/assets/df45d346-21f5-4b3c-b0c8-1cc05c870e64" />
-
+![image](https://github.com/user-attachments/assets/b0139601-76b9-4645-8a2f-52a59858550c)
 
 ### RESULT
-Thus a a Python program to check the relation between two numbers — whether one number is greater than, equal to, or lesser than another — using a lambda function was executed successfully.
+Thus the Python program to check if a number is a Perfect number using the concept of functions is successfully implemented and executed.
